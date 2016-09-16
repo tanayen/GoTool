@@ -2,6 +2,7 @@ package com.vng.teg.logteam.gotool.configuration.hibernateconfiguration;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
@@ -20,6 +21,18 @@ import java.util.Properties;
 @EnableAspectJAutoProxy
 public class HibernateConfiguration {
 
+    @Value("${jdbc.driverClassName}")
+    private String driver;
+
+    @Value("${jdbc.url}")
+    private String url;
+
+    @Value("${jdbc.username}")
+    private String userName;
+
+    @Value("${jdbc.password}")
+    private String pass;
+
     @Autowired
     private Environment environment;
 
@@ -37,33 +50,11 @@ public class HibernateConfiguration {
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/my_db");
-        dataSource.setUsername("admin");
-        dataSource.setPassword("");
+        dataSource.setDriverClassName(driver);
+        dataSource.setUrl(url);
+        dataSource.setUsername(userName);
+        dataSource.setPassword(pass);
         return dataSource;
-    }
-
-//    @Bean
-//    public DataSource dataSource() {
-//        try {
-//            JndiDataSourceLookup dsLookup = new JndiDataSourceLookup();
-//            dsLookup.setResourceRef(false);
-//            DataSource dataSource = dsLookup.getDataSource(environment.getProperty("datasource.jndi"));
-//            return dataSource;
-//        } catch (Exception ex) {
-//            DataSource replacedDS = (DataSource) ctx.getBean("replacedDS");
-//            return replacedDS;
-//        }
-//    }
-
-
-    private Properties hibernateProperties() {
-        Properties properties = new Properties();
-        properties.put("hibernate.dialect", environment.getRequiredProperty("hibernate.dialect"));
-        properties.put("hibernate.show_sql", environment.getRequiredProperty("hibernate.show_sql"));
-        properties.put("hibernate.format_sql", environment.getRequiredProperty("hibernate.format_sql"));
-        return properties;
     }
 
     @Bean(name = "tx")
