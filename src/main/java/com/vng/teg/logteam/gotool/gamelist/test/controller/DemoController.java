@@ -7,13 +7,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/")
 public class DemoController extends BaseController{
 
     @Autowired
     private TestService testService;
 
-    @RequestMapping("/index")
+    @RequestMapping("/")
     public String index() {
 //        String s = testService.getList();
         return testService.getList();
