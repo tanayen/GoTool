@@ -12,7 +12,6 @@ import java.sql.SQLException;
 public abstract class GenericDaoJdbc {
 
     @Autowired
-    @Qualifier("dataSourceJdbc")
     private DataSource dataSource;
 
     protected DataSource getDataSource() {

@@ -15,7 +15,7 @@ public class TestServiceImpl implements TestService {
 
 
     @Override
-    @Transactional
+    @Transactional(transactionManager = "htm", readOnly = true)
     public String getList() {
         return testDao.getList().stream().findFirst().orElse(null).getName();
     }
