@@ -1,7 +1,7 @@
-package com.vng.teg.logteam.gotool.login.service;
+package com.vng.teg.logteam.gotool.user.login.service;
 
-import com.vng.teg.logteam.gotool.login.dao.SecurityDao;
-import com.vng.teg.logteam.gotool.login.model.UserAccount;
+import com.vng.teg.logteam.gotool.user.login.dao.SecurityDao;
+import com.vng.teg.logteam.gotool.user.login.model.UserAccount;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -16,7 +16,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	@Autowired
 	private SecurityDao securityDao;
 
-	@Transactional(readOnly = true)
+	@Transactional(transactionManager = "htm", readOnly = true)
 	public UserDetails loadUserByUsername(String username)
 			throws UsernameNotFoundException {
 		UserAccount user = securityDao.loadUserByUsername(username);

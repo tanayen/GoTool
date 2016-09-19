@@ -10,15 +10,15 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 
-@Service("testService")
-public class TbStatPaymentImpl implements TbStatPaymentService {
+@Service("tbStatPaymentService")
+public class TbStatPaymentServiceImpl implements TbStatPaymentService {
 
     @Autowired
     private TbStatPaymentDao tbStatPaymentDao;
 
 
     @Override
-    @Transactional
+    @Transactional(transactionManager = "htm", readOnly = true)
     public List<TbStatPayment> getList() {
         return tbStatPaymentDao.getList();
     }

@@ -1,11 +1,11 @@
-package com.vng.teg.logteam.gotool.login.dao.impl;
+package com.vng.teg.logteam.gotool.user.login.dao.impl;
 
-import com.vng.teg.logteam.gotool.baseinterface.GenericDaoHibernateSupport;
-import com.vng.teg.logteam.gotool.login.dao.SecurityDao;
-import com.vng.teg.logteam.gotool.login.model.Role;
-import com.vng.teg.logteam.gotool.login.model.RolePermission;
-import com.vng.teg.logteam.gotool.login.model.User;
-import com.vng.teg.logteam.gotool.login.model.UserAccount;
+import com.vng.teg.logteam.gotool.baseinterface.GenericDaoHibernate;
+import com.vng.teg.logteam.gotool.user.login.dao.SecurityDao;
+import com.vng.teg.logteam.gotool.user.login.model.Role;
+import com.vng.teg.logteam.gotool.user.login.model.RolePermission;
+import com.vng.teg.logteam.gotool.user.login.model.User;
+import com.vng.teg.logteam.gotool.user.login.model.UserAccount;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.security.authentication.AccountExpiredException;
@@ -19,7 +19,7 @@ import java.util.Set;
  * Created by tringuyen on 10/20/15.
  */
 @Repository("securityDao")
-public class SecurityDaoHibernate extends GenericDaoHibernateSupport implements SecurityDao {
+public class SecurityDaoHibernate extends GenericDaoHibernate implements SecurityDao {
 
     @Override
     public UserAccount loadUserByUsername(String username) {

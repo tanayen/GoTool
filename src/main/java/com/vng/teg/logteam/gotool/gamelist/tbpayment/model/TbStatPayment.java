@@ -1,20 +1,29 @@
 package com.vng.teg.logteam.gotool.gamelist.tbpayment.model;
 
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
-@Embeddable
+@Entity
 @Table(name = "tb_stat_payment")
-public class TbStatPayment {
+public class TbStatPayment implements Serializable {
+
+
+    private EmbeddableTableWithoutId id;
     private String gameCode;
     private Date logDate;
     private String serverId;
     private String account;
     private Double chargeAmt;
-    private Date registerDate;
 
+    @EmbeddedId
+    public EmbeddableTableWithoutId getId() {
+        return id;
+    }
+
+    public void setId(EmbeddableTableWithoutId id) {
+        this.id = id;
+    }
 
     @Column(name = "game_code", nullable = false)
     public String getGameCode() {
@@ -61,12 +70,4 @@ public class TbStatPayment {
         this.chargeAmt = chargeAmt;
     }
 
-    @Column(name = "register_date", nullable = false)
-    public Date getRegisterDate() {
-        return registerDate;
-    }
-
-    public void setRegisterDate(Date registerDate) {
-        this.registerDate = registerDate;
-    }
 }

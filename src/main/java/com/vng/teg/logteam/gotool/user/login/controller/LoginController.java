@@ -1,4 +1,4 @@
-package com.vng.teg.logteam.gotool.login.controller;
+package com.vng.teg.logteam.gotool.user.login.controller;
 
 import com.vng.teg.logteam.gotool.baseinterface.BaseController;
 import org.springframework.security.core.Authentication;

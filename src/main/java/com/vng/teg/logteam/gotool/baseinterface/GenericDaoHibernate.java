@@ -6,7 +6,7 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
-public abstract class GenericDaoHibernateSupport extends HibernateDaoSupport {
+public abstract class GenericDaoHibernate extends HibernateDaoSupport {
 
 	@Autowired
 	public void initSessionFactory(SessionFactory sessionFactory) {

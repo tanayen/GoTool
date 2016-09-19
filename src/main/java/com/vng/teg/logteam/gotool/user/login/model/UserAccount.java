@@ -1,4 +1,4 @@
-package com.vng.teg.logteam.gotool.login.model;
+package com.vng.teg.logteam.gotool.user.login.model;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

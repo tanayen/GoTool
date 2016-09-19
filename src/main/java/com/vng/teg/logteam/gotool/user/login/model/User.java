@@ -1,4 +1,4 @@
-package com.vng.teg.logteam.gotool.login.model;
+package com.vng.teg.logteam.gotool.user.login.model;
 
 // Generated Sep 18, 2015 5:42:33 PM by Hibernate Tools 4.0.0
 
