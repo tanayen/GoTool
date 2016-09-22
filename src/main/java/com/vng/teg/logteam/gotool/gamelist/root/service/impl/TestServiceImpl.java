@@ -1,7 +1,7 @@
-package com.vng.teg.logteam.gotool.gamelist.test.service.impl;
+package com.vng.teg.logteam.gotool.gamelist.root.service.impl;
 
-import com.vng.teg.logteam.gotool.gamelist.test.dao.TestDao;
-import com.vng.teg.logteam.gotool.gamelist.test.service.TestService;
+import com.vng.teg.logteam.gotool.gamelist.root.dao.TestDao;
+import com.vng.teg.logteam.gotool.gamelist.root.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

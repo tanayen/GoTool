@@ -1,8 +1,8 @@
-package com.vng.teg.logteam.gotool.gamelist.test.dao;
+package com.vng.teg.logteam.gotool.gamelist.root.dao;
 
 
 import com.vng.teg.logteam.gotool.baseinterface.GenericDao;
-import com.vng.teg.logteam.gotool.gamelist.test.model.Test;
+import com.vng.teg.logteam.gotool.gamelist.root.model.Test;
 
 import java.util.List;
 

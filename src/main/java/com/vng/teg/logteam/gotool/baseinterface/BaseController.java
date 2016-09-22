@@ -8,19 +8,19 @@ import org.springframework.util.StringUtils;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
+
 
 public abstract class BaseController {
-    protected void writeJsonResponse(HttpServletResponse response, Object result) throws IOException {
-        Map<String, Object> value = new HashMap<>();
-        value.put("code", "200");
-        value.put("message", result);
 
+    protected String writeJson(Object result) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
+        return objectMapper.writeValueAsString(result);
+    }
 
+
+    protected void writeJsonResponse(HttpServletResponse response, Object result) throws IOException {
         response.setContentType("application/json;charset=UTF-8");
-        response.getWriter().write(objectMapper.writeValueAsString(value));
+        response.getWriter().write(writeJson(result));
     }
 
     protected String getPrincipal() {

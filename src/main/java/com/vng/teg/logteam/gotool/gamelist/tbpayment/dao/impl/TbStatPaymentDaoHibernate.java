@@ -6,6 +6,7 @@ import com.vng.teg.logteam.gotool.gamelist.tbpayment.model.TbStatPayment;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 @Repository("tbStatPaymentDaoHibernate")
 public class TbStatPaymentDaoHibernate extends GenericDaoHibernate implements TbStatPaymentDao {
@@ -17,4 +18,18 @@ public class TbStatPaymentDaoHibernate extends GenericDaoHibernate implements Tb
                 .list();
     }
 
+    @Override
+    public Long count() {
+        return null;
+    }
+
+    @Override
+    public Long countAndFilter(Map<String, String> mapFilter, String fromDate, String toDate) {
+        return null;
+    }
+
+    @Override
+    public List<List<String>> list(Integer pageSize, Integer startValue, String fromDate, String toDate) {
+        return null;
+    }
 }

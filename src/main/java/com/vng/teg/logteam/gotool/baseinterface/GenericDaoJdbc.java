@@ -11,6 +11,8 @@ import java.sql.SQLException;
 
 public abstract class GenericDaoJdbc {
 
+
+
     @Autowired
     private DataSource dataSource;
 

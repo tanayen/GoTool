@@ -85,7 +85,7 @@
                   <li><!-- start message -->
                     <a href="#">
                       <div class="pull-left">
-                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="${cp}/resources/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Support Team
@@ -98,7 +98,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="${cp}/resources/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         AdminLTE Design Team
@@ -110,7 +110,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="${cp}/resources/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Developers
@@ -122,7 +122,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="${cp}/resources/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Sales Department
@@ -134,7 +134,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="${cp}/resources/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Reviewers
@@ -267,13 +267,13 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="${cp}/resources/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs">Alexander Pierce</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="${cp}/resources/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
                   Alexander Pierce - Web Developer
@@ -321,7 +321,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="${cp}/resources/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Alexander Pierce</p>
@@ -424,14 +424,14 @@
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-table"></i> <span>Tables</span>
+            <i class="fa fa-table"></i> <span>Tb Payment</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-            <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
+            <%--<li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>--%>
+            <li><a href="data"><i class="fa fa-circle-o"></i> Data tables</a></li>
           </ul>
         </li>
         <li>
@@ -642,7 +642,7 @@
             <div class="box-body chat" id="chat-box">
               <!-- chat item -->
               <div class="item">
-                <img src="dist/img/user4-128x128.jpg" alt="user image" class="online">
+                <img src="${cp}/resources/dist/img/user4-128x128.jpg" alt="user image" class="online">
 
                 <p class="message">
                   <a href="#" class="name">
@@ -669,7 +669,7 @@
               <!-- /.item -->
               <!-- chat item -->
               <div class="item">
-                <img src="dist/img/user3-128x128.jpg" alt="user image" class="offline">
+                <img src="${cp}/resources/dist/img/user3-128x128.jpg" alt="user image" class="offline">
 
                 <p class="message">
                   <a href="#" class="name">
@@ -684,7 +684,7 @@
               <!-- /.item -->
               <!-- chat item -->
               <div class="item">
-                <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+                <img src="${cp}/resources/dist/img/user2-160x160.jpg" alt="user image" class="offline">
 
                 <p class="message">
                   <a href="#" class="name">
@@ -1241,7 +1241,7 @@
 <!-- ./wrapper -->
 
 <!-- jQuery 2.2.3 -->
-<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="${cp}/resources/plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -1259,7 +1259,7 @@
 <script src="${cp}/resources/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
 <script src="${cp}/resources/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
 <!-- jQuery Knob Chart -->
-<script src="plugins/knob/jquery.knob.js"></script>
+<script src="${cp}/resources/plugins/knob/jquery.knob.js"></script>
 <!-- daterangepicker -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
 <script src="${cp}/resources/plugins/daterangepicker/daterangepicker.js"></script>

@@ -1,4 +1,4 @@
-package com.vng.teg.logteam.gotool.gamelist.test.model;
+package com.vng.teg.logteam.gotool.gamelist.root.model;
 
 import static javax.persistence.GenerationType.IDENTITY;
 

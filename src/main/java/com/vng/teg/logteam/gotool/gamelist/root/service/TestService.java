@@ -1,4 +1,4 @@
-package com.vng.teg.logteam.gotool.gamelist.test.service;
+package com.vng.teg.logteam.gotool.gamelist.root.service;
 
 public interface TestService {
 

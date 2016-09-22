@@ -13,7 +13,6 @@
         <th>Server ID</th>
         <th>Account</th>
         <th>Charge AMT</th>
-        <th>Register Date</th>
     </tr>
     <c:forEach var="data" items="${data}" varStatus="status">
         <tr>
